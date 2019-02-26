@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SDUTACM集训请假</title>
+
+	<!--<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">-->
+	<link rel="stylesheet" href="./../static/css/style.css">
+
+
+	<script src="../static/js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/css_1/styles.css" media="all">
+	<script type="text/javascript" src="../static/js/js_1/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/js_1/moment.js"></script>
+	<script type="text/javascript" src="../static/js/js_1/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// date time picker
+		if($(".iDate.full").length>0){
+			$(".iDate.full").datetimepicker({
+				locale: "zh-cn",
+				format: "YYYY-MM-DD a hh:mm",
+				dayViewHeaderFormat: "YYYY年 MMMM"
+			});
+		}
+		if($(".iDate.date").length>0){
+			$(".iDate.date").datetimepicker({
+				locale:"zh-cn",
+				format:"YYYY-MM-DD",
+				dayViewHeaderFormat:"YYYY年 MMMM"
+			});
+		}
+	})
+	</script>
+	<style>
+	.x{height: 46px;padding: 0 5px;margin-bottom: 30px;border-radius: 24px;position: relative;border: rgba(10,10,10) 0px solid !important;background:#337ab7}
+	.text{width: 220px;height: 46px;outline: none;display: inline-block;font: 14px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei";margin-left: 50px;border: none;background: none;line-height: 46px;}
+	.button{
+	color:#fff;
+	background:#007eff;border: solid 1px #007eff;
+	}
+	.button:hover{
+		background:#f00;
+		color:#fff;
+	}
+	body{ background: #E8E8E8; }
+	input{outline: none; }
+	.style_of_text{
+		border-radius: 15px;height:45px;line-height:45px;background: #fff;width:350px;padding-left:15px;margin-top: 32px;position: relative;
+	}
+	select {
+            height: 40px;
+            overflow: hidden;
+            border: none;
+            outline: none;
+            background: #fff;
+            border-radius: 10px;
+        }
+        option{
+            width: 50%;
+            height: 40px;
+            font-size: 20px;
+            display: inline-block;
+            border-radius: 100px;
+            padding-top: 10px;
+        }
+
+	</style>
+
+</head>
+<body>
+
+	<div style="width:350px;margin:100px auto">
+        <form action="post_info/" class='form' method="post">
+        	<div style="font-size: 30px;font-weight: bold;text-align: center;">SDUTACM请假</div>
+			<div class="style_of_text">
+				<span class="glyphicon glyphicon-user" style="font-size:18px;vertical-align:middle;top:-3px;color: #999;"></span>&nbsp;&nbsp;&nbsp;
+				<input type="text" name="name" style="height:43px;border:0;width:297px;"  placeholder="姓名">
+				<span style='position:absolute;right: 0;bottom:-37px;font-size:13px;color: #f00;'></span>
+			</div>
+			<div class="style_of_text">
+				<span class="glyphicon glyphicon-phone-alt" style="font-size:18px;vertical-align:middle;top:-3px;color: #999;"></span>&nbsp;&nbsp;&nbsp;
+				<input type="text" name="grade" style="height:43px;border:0;width:297px;" placeholder="班级" maxlength="11">
+				<span style='position:absolute;right: 0;bottom:-37px;font-size:13px;color: #f00;'></span>
+			</div>
+			<div class="style_of_text">
+				<span class="glyphicon glyphicon-phone-alt" style="font-size:18px;vertical-align:middle;top:-3px;color: #999;"></span>&nbsp;&nbsp;&nbsp;
+				<select style="width:90%" name="lab">
+    　　			<option value="实验室"  selected="selected">实验室</option>
+    　　			<option value="409">409</option>
+    　　			<option value="501">501</option>
+					<option value="504">504</option>
+					<option value="506">506</option>
+					<option value="508">508</option>
+    			</select>
+
+				<span style='position:absolute;right: 0;bottom:-37px;font-size:13px;color: #f00;'></span>
+			</div>
+			<div class="style_of_text">
+				<span class="glyphicon glyphicon-envelope" style="font-size:18px;vertical-align:middle;top:-3px;color: #999;"></span>
+			<div class="iDate full">
+				<input type="text" name="begin_time" placeholder="请假开始时间" style="height:28px;">
+		 		<button  type="button" class="addOn" style="height:35px;border:0;width:297px;"></button>
+			</div>
+				<span style='position:absolute;right: 0;bottom:-37px;font-size:13px;color: #f00;'></span>
+			</div>
+			<div class="style_of_text">
+				<span class="glyphicon glyphicon-envelope" style="font-size:18px;vertical-align:middle;top:-3px;color: #999;"></span>
+			<div class="iDate full">
+				<input type="text" name="end_time" placeholder="请假结束时间" style="height:28px;">
+		 		<button  type="button" class="addOn" style="height:35px;border:0;width:297px;"></button>
+			</div>
+				<span style='position:absolute;right: 0;bottom:-37px;font-size:13px;color: #f00;'></span>
+			</div>
+			<div style="border-radius: 15px;height:100px;line-height:45px;background: #fff;width:350px;padding-left:15px;margin-top: 32px;position: relative;">
+				<span class="glyphicon glyphicon-envelope" style="font-size:18px;vertical-align:middle;top:-3px;color: #999;"></span>&nbsp;&nbsp;&nbsp;
+				<!--<input type="text" name="why" style="height:43px;border:0;width:297px;" placeholder="原因" >-->
+
+				<textarea style="height:90px;border:0;width:297px;" placeholder="原因" name="why" rows="6"></textarea>
+
+					<span style='position:absolute;right: 0;bottom:-37px;font-size:13px;color: #f00;'></span>
+			</div>
+			<div class="style_of_text">
+				<span class="glyphicon glyphicon-envelope" style="font-size:18px;vertical-align:middle;top:-3px;color: #999;"></span>&nbsp;&nbsp;&nbsp;
+				<input type="text" name="to" style="height:43px;border:0;width:297px;" placeholder="去向" >
+				<span style='position:absolute;right: 0;bottom:-37px;font-size:13px;color: #f00;'></span>
+			</div>
+        	<div class="x" style="margin:30px auto 40px;">
+				<input class="text" type="submit" value="提交" style="color: #fff; font-size: 24px;" >
+			</div>
+			<!--<input type="submit" class="button" value="预约顾问咨询" style="padding: 10px 20px;border-radius: 5px;margin:30px auto 70px;">-->
+		</form>
+</div>
+</body>
+</html>

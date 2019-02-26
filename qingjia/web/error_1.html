@@ -1,0 +1,45 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<meta http-equiv="refresh" content="5;url=leave.html">-->
+    <!--<title>错误</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div style="width:350px;margin:100px auto">-->
+    <!--<p style="font-size:30px">账号姓名班级不匹配</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>错误</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=gkb"/>
+ </head>
+ <body>
+ <h1>账号姓名班级不匹配</h1>
+  <span id="num">3</span>秒后返回 <a href="" onclick="back()"></a>
+  <script type="text/javascript">
+
+   //获取显示秒数的元素，通过定时器来更改秒数。
+    var e=document.getElementById("num");
+    var num=3;
+    var id=setInterval("mid()",1000);
+    function mid(){
+        num--;
+        if(num==0){
+            window.location="/post_index";
+            clearInterval(id);
+            return;
+        }
+        e.innerHTML=num;
+    }
+   //通过window的location和history对象来控制网页的跳转。
+   function back(){
+       window.history.back();
+   }
+ </script>
+</body>
+</html>

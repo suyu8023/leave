@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+.form {
+        width: 800px;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .label {
+        display: block;
+        float: left;
+        width: 20%;
+        height: 100%;
+        line-height: 36px;
+        text-align: center;
+    }
+    .input-area {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #aaa;
+        background: #fff;
+        padding: 0 14px;
+    }
+    .input-area1 {
+        display: block;
+        width: 30%;
+        height: 100%;
+        border: 1px solid #aaa;
+        background: #fff;
+        padding: 0 14px;
+    }
+    .form-group {
+        width: 100%;
+        height: 36px;
+        margin-bottom: 10px;
+    }
+    .form-group:before, .form-group:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+    }
+    .textarea-group {
+        height: auto;
+    }
+    .input {
+        display: block;
+        float: right;
+        width: 78%;
+        height: 100%;
+        line-height: 32px;
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+<p align="center">
+    <font size="15">2018 暑假集训请假</font>
+    <br>
+    <font size="5" color="red">(无故缺勤3次及以上，请假5次及以上，均不能继续参加训练，立即劝退)</font>
+</p>
+<div class="form">
+
+    <form action="post/" method="post">
+        <div class="form-group">
+        <div class="label"><label>学号</label></div>
+        <div class="input">
+            <input name="xuehao" type="text" class="input-area">
+        </div>
+        </div>
+        <br>
+        <div class="form-group">
+        <div class="label"><label>姓名</label></div>
+        <div class="input">
+            <input name="name" type="text" class="input-area">
+        </div>
+        </div>
+        <br>
+        <div class="form-group">
+        <div class="label"><label>班级</label></div>
+        <div class="input">
+            <input name="class1" type="text" class="input-area" placeholder="如:计科1601">
+        </div>
+        </div>
+        <br>
+        <div class="form-group">
+        <div class="label"><label>请假开始时间</label></div>
+        <div class="input">
+            <!--<input name="begin" type="text" class="input-area" placeholder="如:2018.07.30-2018.08.01">-->
+            <input name="begin" class="input-area1" type="datetime-local" value="2015-09-24T00:00:00">
+        </div>
+        </div>
+        <br>
+        <div class="form-group">
+        <div class="label"><label>请假结束时间</label></div>
+        <div class="input">
+            <!--<input name="end" type="text" class="input-area" placeholder="如:2018.07.30-2018.08.01">-->
+            <input name="end" class="input-area1" type="datetime-local" value="2015-09-24T00:00:00">
+        </div>
+        </div>
+        <br>
+        <div class="form-group textarea-group">
+            <div class="label"><label>原因</label></div>
+        <div class="input">
+            <textarea class="input-area" name="why" rows="6"></textarea>
+        </div>
+        </div>
+        <br>
+        <div class="form-group">
+        <div class="label"><label>去向</label></div>
+        <div class="input">
+            <input name="to" type="text" class="input-area">
+        </div>
+        </div>
+        <br>
+        <div style="text-align: center; margin: 0px;">
+            <input type="submit" value="提交" style="background-color: ; size: 10;width: 76px;height: 36px;" >
+        </div>
+
+    </form>
+</div>
+
+
+</body>
+</html>

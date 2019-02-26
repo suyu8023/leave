@@ -1,0 +1,14 @@
+.button{
+	color:#fff;
+	background:#007eff;border: solid 1px #007eff;
+}
+.button:hover{
+	background:#f00;
+	color:#fff;
+}
+body{ background: #007eff; }
+input{outline: none; }
+.style_of_text{
+    border-radius: 15px;height:45px;line-height:45px;background: #fff;width:350px;padding-left:15px;margin-top: 32px;position: relative;
+}
+
